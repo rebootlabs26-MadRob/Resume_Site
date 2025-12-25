@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"name": "ReBoot Lab Tools&Scripts",
+			"path": "."
+		},
+		{
+			"name": "ReBoot Labs Scripts n Stuff",
+			"path": "../Documents/ReBoot Labs Scripts n Stuff"
+		},
+		{
+			"name": "ReBoot Lab GUI Scripts. (Final Saves)",
+			"path": "../Documents/ReBoot Lab GUI Scripts. (Final Saves)"
+		}
+	],
+	"settings": {
+		"claudeCode.useTerminal": true
+	}
+}
