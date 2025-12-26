@@ -4,25 +4,25 @@
     "type": "split",
     "children": [
       {
-        "id": "6bb3057e19aa3fd0",
+        "id": "19ceb5e4c917f4c6",
         "type": "tabs",
         "children": [
           {
-            "id": "80a099ffbc4cdff0",
+            "id": "e246bd433c034d6d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Random Notes/List of Commands.md",
+                "file": "Random Notes/Mad Team Names.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "List of Commands"
+              "title": "Mad Team Names"
             }
           },
           {
-            "id": "82c6fc723a594862",
+            "id": "91e1e1a415387d8d",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -198,13 +198,13 @@
       "bases:Create new base": false
     }
   },
-  "active": "80a099ffbc4cdff0",
+  "active": "e246bd433c034d6d",
   "lastOpenFiles": [
-    "Random Notes/Mad Team Names.md",
-    "Random Notes/List of Commands.md",
-    "Random Notes/2025-12-24 RNDM.md",
-    "Random Notes/2025-12-23 RADM.md",
     "2025-12-25.md",
+    "Random Notes/2025-12-24 RNDM.md",
+    "Random Notes/List of Commands.md",
+    "Random Notes/Mad Team Names.md",
+    "Random Notes/2025-12-23 RADM.md",
     "MEMORY SCRIPT FROM VS.md",
     "AI Sessions/2025-12-24 - Night before job hunt - resume reviewed, 7-day plan incoming.md",
     "AI Sessions/2025-12-24 - Workspace cleanup and Git setup complete.md",
