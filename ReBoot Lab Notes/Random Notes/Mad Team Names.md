@@ -17,7 +17,7 @@ RB-L_B/R  Team:
 192.168.1.179	 \       (your PC)	          =  WastedTime
 192.168.1.188	 \4c-0b-be-21-74-12=RBL-SurfaceHub
 192.168.1.222                       = MasterTOOL-DiagTool0
-192.168.1.223                                        = MasterHelper
+192.168.1.115                                        = MasterHelper
 192.168.1.247                                        = MasterGuard
 
 Known devices:^^^
@@ -27,3 +27,5 @@ PW:
 pihole setpassword 'K33pou5saf3'
 
 665be066-b49c-41c9-abf1-6726c0ad3734
+
+
