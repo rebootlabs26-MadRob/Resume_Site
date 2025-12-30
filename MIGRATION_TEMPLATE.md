@@ -6,31 +6,29 @@ Fill this out completely. **We copy first, verify, THEN delete originals** - no 
 
 ## 📍 SOURCE LOCATIONS (Current C: Drive)
 
-```yaml
-WORKSPACE:
-  Current Path: "C:\Users\Nameless\ReBoot Lab Tools&Scripts"
-  New Path: "D:\"
+**WORKSPACE:**
+- Current: `C:\Users\Nameless\ReBoot Lab Tools&Scripts`
+- Moving to: `D:\`
 
-DOCUMENTS_FOLDER:
-  Current Path: "C:\Users\Nameless\Documents\ReBoot Lab GUI Scripts. (Final Saves)"
-  New Path: "D:\"
+**DOCUMENTS_FOLDER:**
+- Current: `C:\Users\Nameless\Documents\ReBoot Lab GUI Scripts. (Final Saves)`
+- Moving to: `D:\`
 
-AI_TEAM_LOG:
-  Current Path: "C:\Users\Nameless\Documents\ReBoot Labs Scripts n Stuff\AIEnv_chatlog.json"
-  New Path: "D:\"
+**AI_TEAM_LOG:**
+- Current: `C:\Users\Nameless\Documents\ReBoot Labs Scripts n Stuff\AIEnv_chatlog.json`
+- Moving to: `D:\`
 
-PYTHON_VENV:
-  Current Path: "C:\Users\Nameless\.ai_team_venv"
-  Action: [ ] Move to D:   [ ] Recreate on D:   [ ] Keep on C:
+**PYTHON_VENV:**
+- Current: `C:\Users\Nameless\.ai_team_venv`
+- Action: `[ ] Move to D:   [ ] Recreate on D:   [ ] Keep on C:`
 
-OBSIDIAN_VAULT:
-  Current Path: "C:\Users\Nameless\ReBoot Lab Tools&Scripts\ReBoot Lab Notes"
-  (Moves with workspace automatically)
+**OBSIDIAN_VAULT:**
+- Current: `C:\Users\Nameless\ReBoot Lab Tools&Scripts\ReBoot Lab Notes`
+- Note: Moves with workspace automatically
 
-MEMORY_BACKUPS:
-  Current Path: "C:\Users\Nameless\ReBoot Lab Tools&Scripts\.memory-backup"
-  (Moves with workspace automatically)
-```
+**MEMORY_BACKUPS:**
+- Current: `C:\Users\Nameless\ReBoot Lab Tools&Scripts\.memory-backup`
+- Note: Moves with workspace automatically
 
 ---
 
@@ -57,6 +55,7 @@ D:\
 ```
 
 **My choices:**
+
 - Workspace folder name: `_______________________________________`
 - Documents folder name: `_______________________________________`
 - AI Scripts folder name: `_______________________________________`
@@ -66,7 +65,7 @@ D:\
 
 ## ✅ SAFETY REQUIREMENTS (Check all that apply)
 
-```
+```text
 [ ] Create timestamped backup on C: before ANY operations
 [ ] Copy files to D: first (NO deletion until verified)
 [ ] Generate verification report (file counts, sizes, checksums)
@@ -105,7 +104,8 @@ D:\
 ## 🚨 EMERGENCY ROLLBACK
 
 If something goes wrong, I want:
-```
+
+```text
 [ ] Automatic rollback script generated
 [ ] Step-by-step manual rollback instructions
 [ ] Both
@@ -113,6 +113,6 @@ If something goes wrong, I want:
 
 ---
 
-# FILL OUT THE TEMPLATE ABOVE, THEN WE'LL DISCUSS THE GAME PLAN! 🎯
+## FILL OUT THE TEMPLATE ABOVE, THEN WE'LL DISCUSS THE GAME PLAN! 🎯
 
 **DO NOT proceed until you've filled this out completely!**

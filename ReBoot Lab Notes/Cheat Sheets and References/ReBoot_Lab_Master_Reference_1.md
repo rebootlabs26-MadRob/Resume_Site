@@ -33,7 +33,7 @@
 
 ### Surface Hub (RBL-SurfaceHub)
 - **Username:** mastersurface
-- **Grafana:** admin / rebootlabs
+- **Grafana:** Email / T1m32w0rk!
 - **InfluxDB Org:** RBL_SPHub
 - **InfluxDB Bucket:** Mad_Masters/Helpers
 - **InfluxDB Token:** RBL_SuperToken_2024
@@ -45,7 +45,7 @@
 ### Router/WiFi
 - **Router IP:** 192.168.1.1
 - **WiFi SSID:** OkiosAgape13
-- **WiFi Password:** G3tth3fuck0ut26!
+- **WiFi Password:** K33pth3h3110ut26!
 
 ### WastedTime Remote Account
 - **Username:** WastedTimeRm
@@ -221,10 +221,10 @@ docker exec influxdb influx query --org RBL_SPHub --token "RBL_SuperToken_2024" 
 
 ## WEB INTERFACES
 
-| Service | URL | Credentials |
-|---------|-----|-------------|
-| Pi-hole | http://madguard/admin | K33p0u5saf3 |
-| Grafana | http://rbl-surfacehub:3000 | admin / rebootlabs |
+| Service   | URL                        | Credentials        |
+| --------- | -------------------------- | ------------------ |
+| Pi-hole   | http://madguard/admin      | K33p0u5saf3        |
+| Grafana   | http://rbl-surfacehub:3000 | admin / rebootlabs |
 | Portainer | http://rbl-surfacehub:9000 | (set during setup) |
 
 ---
