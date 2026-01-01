@@ -4,56 +4,137 @@
     "type": "split",
     "children": [
       {
-        "id": "3544039fa184be6a",
+        "id": "9823b1a38cda7dab",
         "type": "tabs",
         "children": [
           {
-            "id": "9d605ed1b6a0a36f",
+            "id": "5a2590cff8d85262",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Price Chart General.md",
+                "file": "Resume.md 1-1-26.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Price Chart General"
+              "title": "Resume.md 1-1-26"
             }
           },
           {
-            "id": "3ac5d5b9953986a3",
+            "id": "8133c5531fbee906",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Cheat Sheets and References/ReBoot_Lab_Master_Reference_1.md",
+                "file": "Original GitWeb.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ReBoot_Lab_Master_Reference_1"
+              "title": "Original GitWeb"
             }
           },
           {
-            "id": "b675420fb3f88462",
+            "id": "681f1e7d0382a996",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "Untitled.canvas",
-                "viewState": {
-                  "x": 0,
-                  "y": 0,
-                  "zoom": 0
-                }
+                "file": "GitWeb 2 P-W.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-layout-dashboard",
-              "title": "Untitled"
+              "icon": "lucide-file",
+              "title": "GitWeb 2 P-W"
+            }
+          },
+          {
+            "id": "044638ba8d80df60",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "GitWeb 3 P-NG.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "GitWeb 3 P-NG"
+            }
+          },
+          {
+            "id": "5e3f4d8db19a04bd",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "GitWeb 4 RBL.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "GitWeb 4 RBL"
+            }
+          },
+          {
+            "id": "3067d01753c9815d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "GitWeb Lab Overview .md.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "GitWeb Lab Overview .md"
+            }
+          },
+          {
+            "id": "00631a337cde8944",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Resume-Site.md.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Resume-Site.md"
+            }
+          },
+          {
+            "id": "d3410eb636de8c14",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Updated Wording.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Updated Wording"
+            }
+          },
+          {
+            "id": "5d50debf6f7a6614",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1-Page.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "1-Page"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -110,7 +191,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
+    "width": 234.51165008544922,
     "collapsed": true
   },
   "right": {
@@ -189,13 +270,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ReBoot_Lab_Master_Reference_1.md",
+                "file": "Original GitWeb.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of ReBoot_Lab_Master_Reference_1"
+              "title": "Outline of Original GitWeb"
             }
           }
         ],
@@ -217,44 +298,45 @@
       "bases:Create new base": false
     }
   },
-  "active": "b675420fb3f88462",
+  "active": "8133c5531fbee906",
   "lastOpenFiles": [
-    "Untitled.canvas",
-    "Random Notes/Untitled.md",
-    "Untitled 1.base",
+    "GitWeb 2 P-W.md",
+    "Original GitWeb.md",
+    "1-Page.md",
+    "Resume-Site.md.md",
+    "Updated Wording.md",
+    "GitWeb Lab Overview .md.md",
+    "GitWeb 4 RBL.md",
+    "GitWeb 3 P-NG.md",
+    "Resume.md 1-1-26.md",
+    "Website Info/Resume Web Script Outline.md",
+    "Website Info/Resume.md 1-1-26.pdf",
+    "Resume_.md",
+    "Website Info/WebScript_Resume(GitHub).md",
+    "Website Info/index.html",
+    "Resume.md",
+    "Resume_Original Edit.md",
+    "Untitled.md",
     "Untitled.base",
-    "2025-12-29.md",
-    "Website Info/Pricing & Service Ranges (Collapsible Version).md",
-    "Price Chart General.md",
-    "Website Info",
+    "Untitled 1.base",
+    "Resume_Formatted 1.md",
     "Cheat Sheets and References/ReBoot_Lab_Master_Reference_1.md",
-    "Cheat Sheets and References/ReBoot Lab Monitoring.md",
-    "Info/Mad_Routing.md",
-    "Completed Projects,/Mad_SPHub Diagnostic Pipeline - Project Complete.md",
-    "Info/Mad Team Names.md",
-    "Cheat Sheets and References/🟥 Pi Team + ReBoot Lab Cheat Sheet.md",
     "Random Notes/List of Commands.md",
-    "Random Notes/2025-12-28.md",
-    "2025-12-25.md",
-    "2025-12-27.md",
     "Random Notes/2025-12-29.md",
-    "MEMORY SCRIPT FROM VS.md",
-    "Info",
-    "Cheat Sheets and References",
-    "Cheat Sheets and References/🟦PowerShell 7 Command Cheat Sheet.md",
-    "Cheat Sheets and References/🟦 Ollama Command Cheat Sheet.md",
+    "Random Notes/2025-12-28.md",
     "Random Notes/2025-12-24 RNDM.md",
     "Random Notes/2025-12-23 RADM.md",
-    "AI Sessions/2025-12-24 - Night before job hunt - resume reviewed, 7-day plan incoming.md",
-    "AI Sessions/2025-12-24 - Workspace cleanup and Git setup complete.md",
+    "Info/Mad_Routing.md",
+    "Info/Mad Team Names.md",
+    "Untitled.canvas",
+    "Random Notes/Untitled.md",
+    "2025-12-29.md",
+    "Website Info",
+    "Info",
+    "Cheat Sheets and References",
     "AI Sessions/338c8979a4f77371f87ee5e0eae332bef6d1f63b43fd05d8dc1298ffc9cfb910-2025-12-24-22-33-30-0d88a51ab22d4704b0991d74befd4ba4.zip",
-    "AI Sessions/2025-12-24 - Memory System Setup with Claude.md",
     "AI Sessions/claude",
     "AI Sessions/copilot",
-    "AI Sessions/chatgpt",
-    "AI Sessions/2025-12-24 - Memory System Setup - Initial Test.md",
-    "AI Sessions/README.md",
-    "AI Sessions/Important",
     "Untitled 1.canvas"
   ]
 }
