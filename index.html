@@ -1,114 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<title>Robert Seevers — ReBoot Lab Resume</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+  <title>Robert Seevers — ReBoot Lab Resume</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<style>
-  body {
-    margin: 0;
-    padding: 0;
-    background-color: #1a0033; /* deep purple */
-    color: #e6e6e6; /* off-white */
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-  }
+  <style>
+    :root {
+      --bg-purple: #1a0033;
+      --text-offwhite: #e6e6e6;
+      --green-muted: #55cc88;   /* softened tech green */
+      --blue-royal: #00aaff;
+      --red-accent: #ff4444;
+      --header-black: #000000;
+    }
 
-  /* HEADER */
-  header {
-    background-color: #000000; /* black bar */
-    padding: 30px 40px;
-    border-bottom: 4px solid #55cc88; /* neon green */
-    position: relative;
-  }
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg-purple);
+      color: var(--text-offwhite);
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
 
-  header h1 {
-    margin: 0;
-    font-size: 2.4em;
-    color: #00ff99; /* neon green */
-    text-shadow: 0 0 8px ##55cc88;
-  }
+    /* HEADER */
+    header {
+      background-color: var(--header-black);
+      padding: 24px 40px;
+      border-bottom: 3px solid var(--green-muted);
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
 
-  header .accent-line {
-    width: 180px;
-    height: 4px;
-    background: linear-gradient(
-      to right,
-      #00aaff, /* royal blue */
-      #ff3333 /* neon red */
-    );
-    margin-top: 10px;
-    border-radius: 4px;
-  }
+    header h1 {
+      margin: 0;
+      font-size: 2.1em;
+      color: var(--green-muted);
+      font-weight: 700;
+    }
 
-  /* CONTENT */
-  .container {
-    padding: 40px;
-    max-width: 900px;
-    margin: auto;
-  }
+    header .tagline {
+      font-size: 0.95em;
+      color: var(--blue-royal);
+    }
 
-  h2 {
-    color: #55cc88;
-    margin-top: 40px;
-    margin-bottom: 10px;
-    text-shadow: 0 0 6px #55cc88;
-    border-bottom: 1px solid #00aaff;
-    padding-bottom: 6px;
-  }
+    header .accent-line {
+      width: 170px;
+      height: 3px;
+      background: linear-gradient(
+        to right,
+        var(--blue-royal),
+        var(--red-accent)
+      );
+      border-radius: 3px;
+    }
 
-  h3 {
-    color: #00aaff;
-    margin-top: 25px;
-    margin-bottom: 5px;
-  }
+    /* LAYOUT */
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 32px 24px 48px 24px;
+    }
 
-  p, li {
-    font-size: 1.05em;
-  }
+    h2 {
+      font-size: 1.15em;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--green-muted);
+      margin-top: 28px;
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--blue-royal);
+      padding-bottom: 4px;
+    }
 
-  ul {
-    margin-top: 5px;
-    margin-bottom: 20px;
-  }
+    h3 {
+      font-size: 1.05em;
+      color: var(--blue-royal);
+      margin-top: 18px;
+      margin-bottom: 4px;
+    }
 
-  /* REBOOT LAB SECTION */
-  .lab-section {
-    background-color: rgba(0, 0, 0, 0.25);
-    padding: 20px 25px;
-    border-left: 4px solid #55cc88;
-    border-radius: 6px;
-    margin-top: 20px;
-  }
+    p {
+      margin: 4px 0 8px 0;
+      font-size: 0.98em;
+    }
 
-  .lab-section h3 {
-    color: #55cc88;
-  }
+    ul {
+      margin: 4px 0 12px 18px;
+      padding: 0;
+      font-size: 0.95em;
+    }
 
-  /* LINKS */
-  a {
-    color: #00aaff;
-    text-decoration: none;
-  }
+    li {
+      margin: 2px 0;
+    }
 
-  a:hover {
-    color: #55cc88;
-  }
-</style>
+    .contact-block {
+      margin-bottom: 8px;
+      font-size: 0.95em;
+    }
+
+    /* REBOOT LAB CARD ONLY */
+    .lab-card {
+      background-color: rgba(0, 0, 0, 0.32);
+      border-left: 4px solid var(--green-muted);
+      border-radius: 6px;
+      padding: 18px 20px 16px 20px;
+      margin-top: 10px;
+    }
+
+    .lab-card h3 {
+      margin-top: 0;
+      color: var(--green-muted);
+    }
+
+    a {
+      color: var(--blue-royal);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--green-muted);
+    }
+
+    @media (max-width: 700px) {
+      header {
+        padding: 20px 16px;
+      }
+      .container {
+        padding: 24px 16px 32px 16px;
+      }
+    }
+  </style>
 </head>
-
 <body>
 
 <header>
   <h1>Robert Seevers</h1>
+  <div class="tagline">Remote IT Support • Technical Support Specialist</div>
   <div class="accent-line"></div>
 </header>
 
 <div class="container">
 
-  <p><strong>Remote IT Support • Technical Support Specialist</strong><br>
-  Goodyear, AZ • 602‑758‑7330 • <a href="mailto:Rseevers20@gmail.com">Rseevers20@gmail.com</a></p>
+  <div class="contact-block">
+    Goodyear, AZ • 602‑758‑7330 •
+    <a href="mailto:Rseevers20@gmail.com">Rseevers20@gmail.com</a>
+  </div>
 
   <h2>About Me</h2>
   <p>
@@ -180,20 +220,20 @@
 
   <h2>Technical Skills</h2>
   <ul>
-    <li>PC repair & troubleshooting</li>
+    <li>PC repair &amp; troubleshooting</li>
     <li>OS installs, resets, recovery</li>
     <li>Remote tools: VNC, RDP, SSH</li>
-    <li>Ticketing & documentation</li>
-    <li>Hardware diagnostics & POST interpretation</li>
+    <li>Ticketing &amp; documentation</li>
+    <li>Hardware diagnostics &amp; POST interpretation</li>
     <li>BIOS/UEFI configuration</li>
-    <li>Basic Python & web design</li>
+    <li>Basic Python &amp; web design</li>
     <li>Docker fundamentals</li>
     <li>Grafana dashboards</li>
-    <li>LAN/Wi‑Fi setup & connectivity troubleshooting</li>
+    <li>LAN/Wi‑Fi setup &amp; connectivity troubleshooting</li>
   </ul>
 
   <h2>ReBoot Lab — Independent Engineering Work</h2>
-  <div class="lab-section">
+  <div class="lab-card">
     <p>
       ReBoot Lab is my personal technical workspace where I build diagnostic tools, experiment with
       embedded systems, and develop structured workflows for troubleshooting and monitoring.
@@ -217,12 +257,13 @@
   </div>
 
   <h2>Education</h2>
-  <p><strong>Associate of Science — Computer Technology & Networking</strong><br>
-  College America — Phoenix, AZ<br>
-  Graduated: Aug 2016</p>
+  <p>
+    <strong>Associate of Science — Computer Technology &amp; Networking</strong><br />
+    College America — Phoenix, AZ<br />
+    Graduated: Aug 2016
+  </p>
 
 </div>
 
 </body>
 </html>
-
