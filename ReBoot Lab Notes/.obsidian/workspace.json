@@ -83,12 +83,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "GitWeb Lab Overview .md.md",
+                "file": "GitWeb Lab Overview.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "GitWeb Lab Overview .md"
+              "title": "GitWeb Lab Overview"
             }
           },
           {
@@ -133,8 +133,7 @@
               "title": "1-Page"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -298,14 +297,16 @@
       "bases:Create new base": false
     }
   },
-  "active": "8133c5531fbee906",
+  "active": "5a2590cff8d85262",
   "lastOpenFiles": [
-    "GitWeb 2 P-W.md",
-    "Original GitWeb.md",
+    "lab-overview.html",
+    "index.html",
+    "GitWeb Lab Overview.md",
     "1-Page.md",
-    "Resume-Site.md.md",
     "Updated Wording.md",
-    "GitWeb Lab Overview .md.md",
+    "Resume-Site.md.md",
+    "Original GitWeb.md",
+    "GitWeb 2 P-W.md",
     "GitWeb 4 RBL.md",
     "GitWeb 3 P-NG.md",
     "Resume.md 1-1-26.md",
@@ -330,13 +331,11 @@
     "Info/Mad Team Names.md",
     "Untitled.canvas",
     "Random Notes/Untitled.md",
-    "2025-12-29.md",
     "Website Info",
     "Info",
     "Cheat Sheets and References",
     "AI Sessions/338c8979a4f77371f87ee5e0eae332bef6d1f63b43fd05d8dc1298ffc9cfb910-2025-12-24-22-33-30-0d88a51ab22d4704b0991d74befd4ba4.zip",
     "AI Sessions/claude",
-    "AI Sessions/copilot",
     "Untitled 1.canvas"
   ]
 }
