@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Robert Seevers — Resume & Lab Work</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<style>
+  :root {
+    /* === RBL THEME COLORS === */
+    --bg: #1f0033; /* deep purple */
+    --bg-alt: #05000a; /* almost black */
+    --accent: #55cc88; /* muted green */
+    --accent-soft: rgba(85, 204, 136, 0.12);
+    --text-main: #e6e6e6;
+    --text-muted: #9ca3af;
+    --card-bg: rgba(10, 0, 20, 0.85);
+    --border-subtle: rgba(255, 255, 255, 0.08);
+    --blue-royal: #00aaff;
+    --red-accent: #ff4444;
+
+    --font-main: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    font-family: var(--font-main);
+    background: radial-gradient(circle at top, #1f0033 0%, #05000a 55%);
+    color: var(--text-main);
+  }
+
+  a { color: var(--blue-royal); text-decoration: none; }
+  a:hover { color: var(--accent); }
+
+  /* Layout */
+  .page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1.5rem 1.25rem 3rem;
+  }
+
+  /* HEADER */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    backdrop-filter: blur(12px);
+    background: linear-gradient(
+      to bottom,
+      rgba(5, 0, 10, 0.95),
+      rgba(5, 0, 10, 0.85),
+      rgba(5, 0, 10, 0)
+    );
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .nav-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0.6rem 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .brand {
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  nav a {
+    margin-left: 1rem;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+  }
+
+  nav a:hover {
+    color: var(--accent);
+  }
+
+  /* Hero */
+  .hero {
+    margin-top: 2.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .hero-name {
+    font-size: 2.25rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    color: var(--accent);
+  }
+
+  .hero-sub {
+    color: var(--blue-royal);
+    margin-top: 0.25rem;
+  }
+
+  .hero-contact {
+    margin-top: 0.75rem;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+  }
+
+  .hero-contact span {
+    margin-right: 1rem;
+  }
+
+  .hero-intro {
+    margin-top: 1.25rem;
+    max-width: 650px;
+    font-size: 0.98rem;
+    color: #d1d5db;
+  }
+
+  /* Sections */
+  section {
+    margin-top: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--accent);
+  }
+
+  h2::before {
+    content: "";
+    width: 18px;
+    height: 18px;
+    border-radius: 999px;
+    background: radial-gradient(circle at 30% 30%, var(--accent), var(--blue-royal));
+    box-shadow: 0 0 16px rgba(85, 204, 136, 0.4);
+  }
+
+  /* Cards */
+  .card {
+    background: linear-gradient(135deg, rgba(10,0,20,0.9), rgba(5,0,10,0.95));
+    border-radius: 0.75rem;
+    border: 1px solid var(--border-subtle);
+    padding: 1.25rem 1.35rem;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+  }
+
+  .card + .card {
+    margin-top: 1rem;
+  }
+
+  .muted {
+    color: var(--text-muted);
+  }
+
+  /* Resume content */
+  .job-title {
+    font-weight: 600;
+    color: var(--blue-royal);
+  }
+
+  .job-meta {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 0.35rem;
+  }
+
+  ul {
+    margin: 0.4rem 0 0.5rem 1.1rem;
+    padding: 0;
+    font-size: 0.92rem;
+  }
+
+  li { margin-bottom: 0.25rem; }
+
+  /* Details / dropdowns */
+  details {
+    border-radius: 0.6rem;
+    border: 1px solid var(--border-subtle);
+    background: radial-gradient(circle at top left, var(--accent-soft), rgba(5,0,10,0.95));
+    padding: 0.55rem 0.9rem;
+    margin-bottom: 0.55rem;
+  }
+
+  summary {
+    cursor: pointer;
+    list-style: none;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--text-main);
+  }
+
+  summary::after {
+    content: "▾";
+    font-size: 0.75rem;
+    margin-left: 0.5rem;
+    color: var(--text-muted);
+    transition: transform 0.2s ease;
+  }
+
+  details[open] summary::after {
+    transform: rotate(-180deg);
+  }
+
+  /* Tags */
+  .tags {
+    margin-top: 0.35rem;
+  }
+
+  .tag {
+    display: inline-block;
+    background: rgba(5,0,10,0.9);
+    border-radius: 999px;
+    border: 1px solid var(--border-subtle);
+    padding: 0.18rem 0.6rem;
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    margin: 0.08rem 0.2rem;
+  }
+
+  /* Fade-in on scroll */
+  .fade-in {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.55s ease-out, transform 0.55s ease-out;
+  }
+
+  .fade-in.animate {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Contact */
+  .contact-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    font-size: 0.95rem;
+  }
+
+  .contact-label {
+    font-weight: 500;
+    color: var(--accent);
+  }
+
+  .contact-value {
+    color: var(--text-muted);
+  }
+
+  @media (max-width: 640px) {
+    .hero-name { font-size: 1.7rem; }
+    .nav-inner { padding-inline: 0.9rem; }
+    .page { padding-inline: 0.9rem; }
+    nav a { margin-left: 0.6rem; font-size: 0.82rem; }
+  }
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav-inner">
+    <div class="brand">ReBoot_Lab • PCB | ER</div>
+    <nav>
+      <a href="#resume">Resume</a>
+      <a href="#styles">Resume Styles</a>
+      <a href="#projects">Portfolio</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="page">
+
+  <!-- HERO -->
+  <section class="hero fade-in">
+    <div class="hero-name">Robert Seevers</div>
+    <div class="hero-sub">IT & Electronics Professional • Diagnostics • Remote‑Ready Support</div>
+
+    <div class="hero-contact">
+      <span>📍 Goodyear, AZ</span>
+      <span>📞 602‑758‑7330</span>
+      <span>✉ <a href="mailto:Rseevers20@gmail.com">Rseevers20@gmail.com</a></span>
+    </div>
+
+    <p class="hero-intro">
+      I’m an IT and electronics professional with a strong background in diagnostics, repair, system troubleshooting,
+      and workflow engineering. Over the past decade, I’ve built and led repair teams, supported multi‑store operations,
+      and developed a personal technical lab focused on diagnostic platforms, monitoring dashboards, embedded systems,
+      and structured repair processes.
+    </p>
+  </section>
+
+  <!-- RESUME -->
+  <section id="resume" class="fade-in">
+    <h2>Resume</h2>
+
+    <div class="card">
+      <h3>Professional Summary</h3>
+      <p>
+        I’m an IT support professional with hands‑on experience across PC repair, diagnostics, troubleshooting,
+        and technical operations. I’ve managed multi‑store repair teams, supported QA operations, worked in
+        security roles, and maintained solar‑plant systems. I’m reliable, adaptable, and comfortable working
+        independently in remote environments.
+      </p>
+      <p>
+        I also run ReBoot Lab — my personal engineering workspace where I build diagnostic tools, monitoring
+        dashboards, embedded‑system utilities, and structured troubleshooting workflows.
+      </p>
+    </div>
+
+    <div class="card" style="margin-top:1.2rem;">
+      <h3>Professional Experience</h3>
+
+      <div style="margin-bottom:1rem;">
+        <div class="job-title">Night Maintenance Technician — Fluor, Arlington Valley Solar Plant</div>
+        <div class="job-meta">Dec 2024 – Sept 2025 • Arlington Valley, AZ</div>
+        <ul>
+          <li>Performed nightly maintenance on solar panels and control buildings.</li>
+          <li>Conducted inspections and documented issues.</li>
+          <li>Ensured site security and operational readiness.</li>
+        </ul>
+      </div>
+
+      <div style="margin-bottom:1rem;">
+        <div class="job-title">Security Officer — Dream City Church</div>
+        <div class="job-meta">Jun 2023 – Mar 2024 • Phoenix, AZ</div>
+        <ul>
+          <li>Ensured safety across a large campus.</li>
+          <li>Responded to incidents and followed safety protocols.</li>
+          <li>Maintained calm, professional communication.</li>
+        </ul>
+      </div>
+
+      <div style="margin-bottom:1rem;">
+        <div class="job-title">Quality Assurance Inspector — Carvana</div>
+        <div class="job-meta">Oct 2022 – Mar 2023 • Phoenix, AZ</div>
+        <ul>
+          <li>Inspected vehicles prior to delivery.</li>
+          <li>Identified and documented quality issues.</li>
+          <li>Collaborated with technicians to resolve defects.</li>
+        </ul>
+      </div>
+
+      <div style="margin-bottom:1rem;">
+        <div class="job-title">Repair Technician — Mobile Kangaroo</div>
+        <div class="job-meta">Feb 2022 – Oct 2022 • Phoenix, AZ</div>
+        <ul>
+          <li>Diagnosed and repaired laptops, desktops, and mobile devices.</li>
+          <li>Explained issues clearly to customers.</li>
+          <li>Maintained repair documentation and inventory.</li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="job-title">General Manager / Lead Repair Technician — UbreakiFix (Multi‑Location)</div>
+        <div class="job-meta">Apr 2015 – Jan 2021 • Phoenix, AZ</div>
+        <ul>
+          <li>Managed operations across three storefronts.</li>
+          <li>Trained and supported technicians.</li>
+          <li>Handled escalations and ensured repair quality.</li>
+          <li>Balanced scheduling, inventory, and customer service.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:1.2rem;">
+      <h3>Skills</h3>
+
+      <p class="muted">Technical Skills</p>
+      <div class="tags">
+        <span class="tag">PC Repair</span>
+        <span class="tag">Diagnostics</span>
+        <span class="tag">LAN/Wi‑Fi Troubleshooting</span>
+        <span class="tag">OS Installs</span>
+        <span class="tag">Malware Removal</span>
+        <span class="tag">Hardware Fault Isolation</span>
+        <span class="tag">POST Code Analysis</span>
+        <span class="tag">Grafana Dashboards</span>
+        <span class="tag">Docker</span>
+        <span class="tag">Embedded Systems</span>
+        <span class="tag">Python Basics</span>
+        <span class="tag">Technical Documentation</span>
+      </div>
+
+      <p class="muted" style="margin-top:1rem;">Operational & Leadership Skills</p>
+      <div class="tags">
+        <span class="tag">Store Management</span>
+        <span class="tag">Staff Training</span>
+        <span class="tag">Inventory Control</span>
+        <span class="tag">Customer Service</span>
+        <span class="tag">Security Operations</span>
+      </div>
+    </div>
+
+    <!-- REBOOT LAB SECTION -->
+    <div class="card" style="margin-top:1.2rem;">
+      <h3>ReBoot Lab — Independent Engineering Work</h3>
+      <p class="muted">Independent • 2023–Present</p>
+
+      <ul>
+        <li>Built a Raspberry Pi–based diagnostic appliance for POST codes and system monitoring.</li>
+        <li>Developed touchscreen UI tools using Python/Tkinter.</li>
+        <li>Created multi‑system monitoring setups using Grafana and Docker.</li>
+        <li>Designed structured troubleshooting trees and repair workflows.</li>
+        <li>Built custom scripts and utilities for diagnostics.</li>
+        <li>Maintained a multi‑device workstation environment for remote access and monitoring.</li>
+      </ul>
+    </div>
+
+    <div class="card" style="margin-top:1.2rem;">
+      <h3>Education</h3>
+      <p>
+        <strong>Associate of Science — Computer Technology & Networking</strong><br />
+        College America — Phoenix, AZ<br />
+        Graduated: Aug 2016
+      </p>
+    </div>
+  </section>
+
+  <!-- Resume Styles -->
+  <section id="styles" class="fade-in">
+    <h2>Resume Styles</h2>
+    <div class="card">
+      <p class="muted">
+        These resume variations highlight different strengths depending on the role.
+      </p>
+
+      <details open>
+        <summary>IT Helpdesk (Remote)</summary>
+        <p>Focus on remote troubleshooting, ticketing, OS issues, and communication.</p>
+      </details>
+
+      <details>
+        <summary>Electronics Repair</summary>
+        <p>Highlights diagnostics, hardware repair, and structured troubleshooting.</p>
+      </details>
+
+      <details>
+        <summary>Systems Engineering / Monitoring</summary>
+        <p>Emphasizes dashboards, diagnostic platforms, and workflow automation.</p>
+      </details>
+
+      <details>
+        <summary>Security + IT Hybrid</summary>
+        <p>Blends physical security experience with IT systems and monitoring.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section id="projects" class="fade-in">
+    <h2>Portfolio and Tools I Built</h2>
+
+    <div class="card">
+      <h3>Diagnostic Platforms & Workflows</h3>
+      <ul>
+        <li><strong>Custom Diagnostic Platforms:</strong> POST analysis, rail checks, fault isolation.</li>
+        <li><strong>Appliance‑Style Interfaces:</strong> Clean UIs for diagnostics and monitoring.</li>
+        <li><strong>Troubleshooting Trees:</strong> Stepwise flows for repeatable repair processes.</li>
+      </ul>
+
+      <h3>Monitoring & Dashboards</h3>
+      <ul>
+        <li><strong>Grafana Dashboards:</strong> System metrics, health checks, workflow visibility.</li>
+        <li><strong>Multi‑System Monitoring:</strong> Synchronized monitoring and remote access.</li>
+      </ul>
+
+      <h3>Tooling & Environments</h3>
+      <ul>
+        <li><strong>Docker Environments:</strong> Isolated testing and tool deployment.</li>
+        <li><strong>Documentation Systems:</strong> SOPs, checklists, repair logs.</li>
+        <li><strong>Personal Website:</strong> Designed and built this site.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="fade-in">
+    <h2>Contact</h2>
+
+    <div class="card">
+      <p>
+        <strong>Email:</strong> <a href="mailto:Rseevers20@gmail.com">Rseevers20@gmail.com</a><br />
+        <strong>Phone:</strong> 602-758-7330<br />
+        <strong>Location:</strong> Goodyear, AZ 85338
+      </p>
+
+      <p>
+        Feel free to reach out for technical consulting, remote support, or collaboration opportunities.
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<script>
+  // Smooth fade-in animation on scroll
+  const fadeElements = document.querySelectorAll('.fade-in');
+
+  const fadeObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate');
+        fadeObserver.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.15,
+    rootMargin: '0px 0px -50px 0px'
+  });
+
+  fadeElements.forEach(el => fadeObserver.observe(el));
+</script>
+
+</body>
+</html>
