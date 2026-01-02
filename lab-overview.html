@@ -8,12 +8,15 @@
   :root {
     --bg: #1a0033;
     --bg-alt: #0d001a;
-    --accent: #00ff99;
-    --accent-soft: rgba(0, 255, 153, 0.12);
-    --text-main: #00ff99;
-    --text-muted: #66ffcc;
+    --accent: #55cc88;
+    --accent-soft: rgba(85, 204, 136, 0.12);
+    --text-main: #e0e7ff;
+    --text-muted: #94a3b8;
     --card-bg: #0d001a;
-    --border-subtle: rgba(0, 255, 153, 0.2);
+    --border-subtle: rgba(85, 204, 136, 0.2);
+    --purple-joker: #7A1FA2;
+    --blue-bright: #0ea5e9;
+    --red-accent: #ff4444;
     --font-main: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   }
 
@@ -26,8 +29,8 @@
     color: var(--text-main);
   }
 
-  a { color: var(--accent); text-decoration: none; }
-  a:hover { text-decoration: underline; }
+  a { color: var(--blue-bright); text-decoration: none; }
+  a:hover { color: var(--accent); text-decoration: underline; }
 
   .page {
     max-width: 900px;
@@ -58,17 +61,20 @@
     font-weight: 600;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-    color: var(--text-muted);
+    color: var(--purple-joker);
+    text-shadow: 0 0 8px rgba(85, 204, 136, 0.4);
   }
 
   nav a {
     margin-left: 1rem;
     font-size: 0.9rem;
-    color: var(--text-muted);
+    color: var(--purple-joker);
+    text-shadow: 0 0 6px rgba(85, 204, 136, 0.3);
   }
 
   nav a:hover {
     color: var(--accent);
+    text-shadow: 0 0 10px rgba(85, 204, 136, 0.6);
   }
 
   .hero {
@@ -80,10 +86,12 @@
     font-size: 2.25rem;
     font-weight: 700;
     letter-spacing: 0.03em;
+    color: var(--accent);
+    text-shadow: 0 0 12px rgba(85, 204, 136, 0.5);
   }
 
   .hero-sub {
-    color: var(--text-muted);
+    color: var(--blue-bright);
     margin-top: 0.25rem;
     font-size: 1.1rem;
   }
@@ -105,6 +113,8 @@
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
+    color: var(--purple-joker);
+    text-shadow: 0 0 8px rgba(85, 204, 136, 0.4);
   }
 
   h2::before {
@@ -112,14 +122,15 @@
     width: 18px;
     height: 18px;
     border-radius: 999px;
-    background: radial-gradient(circle at 30% 30%, var(--accent), #00ffaa);
-    box-shadow: 0 0 16px rgba(0, 255, 153, 0.7);
+    background: radial-gradient(circle at 30% 30%, var(--accent), var(--purple-joker));
+    box-shadow: 0 0 16px rgba(85, 204, 136, 0.7);
   }
 
   h3 {
     font-size: 1.1rem;
     margin-top: 1.5rem;
     margin-bottom: 0.75rem;
+    color: var(--blue-bright);
   }
 
   h4 {
