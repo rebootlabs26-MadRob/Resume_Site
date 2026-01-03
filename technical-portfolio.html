@@ -203,7 +203,7 @@
       <h3>Multi-Device Monitoring Infrastructure</h3>
       <p class="muted">Dec 2025 - Present</p>
       
-      <p>Architected and deployed a distributed monitoring infrastructure across 4 devices. The system uses MQTT pub/sub messaging to collect 39+ metrics in real-time, stores them in InfluxDB with automated retention policies, and visualizes everything through 25+ custom Grafana panels. Reduced memory consumption from 93% to 23% through service migration and optimization strategies.</p>
+      <p>Built a monitoring system across 4 devices that tracks 39+ metrics in real-time. Uses MQTT messaging to collect data, stores it in InfluxDB with automatic cleanup, and displays everything through 25+ custom Grafana dashboards. Cut memory usage from 93% down to 23% by moving services to Docker and optimizing configurations.</p>
 
       <p style="margin-top:0.75rem;"><strong>Technical Stack:</strong> Docker Compose orchestration, Python MQTT publishers, Telegraf metric collection, InfluxDB 2.7 time-series database, Grafana visualization, systemd service management</p>
 
@@ -220,13 +220,13 @@
       <h3>Network Security Implementation</h3>
       <p class="muted">Dec 2025 - Present</p>
       
-      <p>Designed layered security architecture combining DNS-level filtering (Pi-hole), signature-based intrusion detection (Suricata), adaptive SSH protection (fail2ban), and stateful firewall rules (UFW). Security events aggregate into Loki for centralized log analysis. Currently deploying WireGuard VPN for secure remote access with split-tunnel configuration.</p>
+      <p>Built layered security setup with DNS filtering (Pi-hole), intrusion detection (Suricata), SSH protection (fail2ban), and firewall rules (UFW). All security events feed into Loki for centralized logging. Currently setting up WireGuard VPN for secure remote access.</p>
 
-      <p style="margin-top:0.75rem;"><strong>Security Metrics:</strong> 40%+ malicious DNS requests blocked, zero successful intrusion attempts, real-time alerting on anomalous activity</p>
+      <p style="margin-top:0.75rem;"><strong>Security Results:</strong> Blocks over 40% of malicious DNS requests, zero successful intrusions, real-time alerts for suspicious activity</p>
 
       <p style="margin-top:0.75rem;"><strong>Implementation Details:</strong></p>
       <ul style="margin-top:0.25rem;">
-        <li>Pi-hole: Network-wide DNS filtering blocking 40%+ of malicious requests</li>
+        <li>Pi-hole: Network-wide DNS filtering blocking over 40% of malicious requests</li>
         <li>Suricata IDS: Signature-based detection with Emerging Threats ruleset</li>
         <li>fail2ban: Adaptive SSH brute-force protection with escalating ban times</li>
         <li>UFW Firewall: Default-deny policy with granular service-level rules</li>
@@ -238,7 +238,7 @@
       <h3>Hardware Diagnostic Platform</h3>
       <p class="muted">2023 - Present</p>
       
-      <p>Built custom POST code diagnostic tool using Raspberry Pi with GPIO integration. The Python/Tkinter interface provides real-time hardware fault detection during boot, then transitions to active system monitoring once the OS loads. Monitors CPU temperature, memory usage, disk health, and network activity in real-time. Integrated full system security scanning to detect malicious software, corrupt data, and integrity violations. Designed for rapid motherboard diagnostics, ongoing system health monitoring, and repair workflow optimization.</p>
+      <p>Built a custom diagnostic tool using Raspberry Pi that reads POST codes during computer boot to catch hardware faults. Once the system is running, it switches to monitoring CPU temp, memory, disk health, and network activity. Added security scanning to detect malware and corrupted data. Designed for fast motherboard diagnostics and ongoing system health checks during repairs.</p>
 
       <p style="margin-top:0.75rem;"><strong>Technical Features:</strong></p>
       <ul style="margin-top:0.25rem;">
