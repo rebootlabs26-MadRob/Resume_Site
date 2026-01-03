@@ -1,0 +1,9 @@
+# Ignore everything by default
+*
+
+# Only allow resume website files
+!.gitignore
+!index.html
+!technical-portfolio.html
+!lab-overview.html
+!CNAME
