@@ -1,0 +1,106 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Save Memory",
+            "type": "shell",
+            "command": "pwsh",
+            "args": [
+                "-File",
+                "${workspaceFolder}\\Memory.ps1",
+                "save",
+                "\"${input:sessionName}\""
+            ],
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Auto-Save Memory",
+            "type": "shell",
+            "command": "pwsh",
+            "args": [
+                "-File",
+                "${workspaceFolder}\\Memory.ps1",
+                "auto"
+            ],
+            "presentation": {
+                "echo": true,
+                "reveal": "silent",
+                "focus": false,
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Recall Sessions",
+            "type": "shell",
+            "command": "pwsh",
+            "args": [
+                "-File",
+                "${workspaceFolder}\\Memory.ps1",
+                "recall"
+            ],
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": true,
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Search Memory",
+            "type": "shell",
+            "command": "pwsh",
+            "args": [
+                "-File",
+                "${workspaceFolder}\\Memory.ps1",
+                "search",
+                "\"${input:searchTerm}\""
+            ],
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": true,
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Memory Status",
+            "type": "shell",
+            "command": "pwsh",
+            "args": [
+                "-File",
+                "${workspaceFolder}\\Memory.ps1",
+                "status"
+            ],
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": true,
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        }
+    ],
+    "inputs": [
+        {
+            "id": "sessionName",
+            "type": "promptString",
+            "description": "Session name/description",
+            "default": "Current Work"
+        },
+        {
+            "id": "searchTerm",
+            "type": "promptString",
+            "description": "Search term",
+            "default": ""
+        }
+    ]
+}

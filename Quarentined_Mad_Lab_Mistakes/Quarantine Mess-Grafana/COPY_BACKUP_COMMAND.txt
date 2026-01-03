@@ -1,0 +1,8 @@
+Run this in a NEW PowerShell window:
+
+scp mastersurface@192.168.1.188:~/BACKUP_JAN2_2026_PRE_NAME_FIX.tar.gz "c:\Users\Nameless\ReBoot Lab Tools&Scripts\Quarentined_Mad_Lab_Mistakes\Quarantine Mess-Grafana\"
+
+Password: ferd
+
+Then run:
+Get-ChildItem "c:\Users\Nameless\ReBoot Lab Tools&Scripts\Quarentined_Mad_Lab_Mistakes\Quarantine Mess-Grafana"

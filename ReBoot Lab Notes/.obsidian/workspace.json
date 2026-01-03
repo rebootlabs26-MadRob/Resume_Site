@@ -4,109 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "9823b1a38cda7dab",
+        "id": "bb43ff447b0b9e60",
         "type": "tabs",
         "children": [
           {
-            "id": "5a2590cff8d85262",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Resume.md 1-1-26.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Resume.md 1-1-26"
-            }
-          },
-          {
-            "id": "8133c5531fbee906",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Original GitWeb.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Original GitWeb"
-            }
-          },
-          {
-            "id": "681f1e7d0382a996",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "GitWeb 2 P-W.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "GitWeb 2 P-W"
-            }
-          },
-          {
-            "id": "044638ba8d80df60",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "GitWeb 3 P-NG.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "GitWeb 3 P-NG"
-            }
-          },
-          {
-            "id": "5e3f4d8db19a04bd",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "GitWeb 4 RBL.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "GitWeb 4 RBL"
-            }
-          },
-          {
-            "id": "3067d01753c9815d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "GitWeb Lab Overview.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "GitWeb Lab Overview"
-            }
-          },
-          {
-            "id": "00631a337cde8944",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Resume-Site.md.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Resume-Site.md"
-            }
-          },
-          {
-            "id": "d3410eb636de8c14",
+            "id": "8d8fbae2a853661e",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -117,20 +19,6 @@
               },
               "icon": "lucide-file",
               "title": "Updated Wording"
-            }
-          },
-          {
-            "id": "5d50debf6f7a6614",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1-Page.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "1-Page"
             }
           }
         ]
@@ -297,45 +185,45 @@
       "bases:Create new base": false
     }
   },
-  "active": "5a2590cff8d85262",
+  "active": "8d8fbae2a853661e",
   "lastOpenFiles": [
+    "SkullGUI.txt",
+    "Check-MadGuard.ps1",
+    "Completed Projects,/THISONEWORKSSAVE (2).py",
+    "Info/Resume_1-1-26.pdf",
+    "Website Info/CNAME",
+    "Completed Projects,/SETUP_COMPLETE.md",
+    "Random Notes/README.md",
+    "Random Notes/MIGRATION_TEMPLATE.md",
+    "Info/hardware_collector.py",
+    "Info/Memory.ps1",
+    "Info/MEMORY-SYSTEM.md",
+    "Random Notes/Fire_HD8_Unlock_Progress.md",
+    "Random Notes/Fire_HD8_Unlock_Part1_Summary.md",
+    "Random Notes/Fire_HD8_Recovery_State_Dec16.md",
+    "Random Notes/Fire_HD8_Chat_Log_Dec14_2025.md",
+    "Random Notes/DOUGLAS_RECOVERY_PLAN.md",
+    "Completed Projects,/ReBootLab-PROJECT-SUMMARY.md",
+    "Completed Projects,/MasterGuard_Project_Plan.md",
+    "Completed Projects,/Mad_SPHub_Project_Complete.md",
+    "Resume Skill tree.md.md",
+    "Info/Resume Skill tree.md.md",
+    "GitWeb-Skills Matrix Script.md",
+    "Website Info/GitWeb-Skills Matrix Script.md",
+    "GitWeb-DARK GLASS SKILLS GRID.md",
+    "Website Info/GitWeb-DARK GLASS SKILLS GRID.md",
+    "Info/I.T. Job Breakdown.md.md",
+    "Updated Wording.md",
+    "Cheat Sheets and References/ReBoot_Lab_Master_Reference_1.md",
+    "I.T. Job Breakdown.md.md",
+    "Info/Mad Team Names.md",
+    "Info/Mad_Routing.md",
+    "Completed Projects,/Mad_SPHub Diagnostic Pipeline - Project Complete.md",
     "lab-overview.html",
     "index.html",
-    "GitWeb Lab Overview.md",
-    "1-Page.md",
-    "Updated Wording.md",
-    "Resume-Site.md.md",
-    "Original GitWeb.md",
-    "GitWeb 2 P-W.md",
-    "GitWeb 4 RBL.md",
-    "GitWeb 3 P-NG.md",
-    "Resume.md 1-1-26.md",
-    "Website Info/Resume Web Script Outline.md",
     "Website Info/Resume.md 1-1-26.pdf",
-    "Resume_.md",
-    "Website Info/WebScript_Resume(GitHub).md",
     "Website Info/index.html",
-    "Resume.md",
-    "Resume_Original Edit.md",
-    "Untitled.md",
-    "Untitled.base",
-    "Untitled 1.base",
-    "Resume_Formatted 1.md",
-    "Cheat Sheets and References/ReBoot_Lab_Master_Reference_1.md",
-    "Random Notes/List of Commands.md",
-    "Random Notes/2025-12-29.md",
-    "Random Notes/2025-12-28.md",
-    "Random Notes/2025-12-24 RNDM.md",
-    "Random Notes/2025-12-23 RADM.md",
-    "Info/Mad_Routing.md",
-    "Info/Mad Team Names.md",
     "Untitled.canvas",
-    "Random Notes/Untitled.md",
-    "Website Info",
-    "Info",
-    "Cheat Sheets and References",
-    "AI Sessions/338c8979a4f77371f87ee5e0eae332bef6d1f63b43fd05d8dc1298ffc9cfb910-2025-12-24-22-33-30-0d88a51ab22d4704b0991d74befd4ba4.zip",
-    "AI Sessions/claude",
     "Untitled 1.canvas"
   ]
 }

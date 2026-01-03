@@ -1,0 +1,80 @@
+networks:
+  hubnet:
+services:
+  mosquitto:
+    image: eclipse-mosquitto
+    container_name: mosquitto
+    ports:
+      - "1883:1883"
+    networks:
+      - hubnet
+    volumes:
+      - /home/mastersurface/mosquitto/config/mosquitto.conf:/mosquitto/config/mosquitto.conf:ro
+  telegraf:
+    image: telegraf:latest
+    container_name: telegraf
+    networks:
+      - hubnet
+    volumes:
+      - /home/mastersurface/telegraf:/etc/telegraf:ro
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    depends_on:
+      - mosquitto
+  influxdb:
+    image: influxdb:2.7
+    container_name: influxdb
+    ports:
+      - "8086:8086"
+    networks:
+      - hubnet
+    volumes:
+      - influxdb_data:/var/lib/influxdb
+  grafana:
+    image: grafana/grafana
+    container_name: grafana
+    ports:
+      - "3000:3000"
+    networks:
+      - hubnet
+    volumes:
+      - grafana_data:/var/lib/grafana
+  portainer:
+    image: portainer/portainer-ce
+    container_name: portainer
+    ports:
+      - "9000:9000"
+    networks:
+      - hubnet
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - portainer_data:/data
+  loki:
+    image: grafana/loki:2.9.8
+    container_name: loki
+    user: "0:0"
+    ports:
+      - "3100:3100"
+    networks:
+      - hubnet
+    volumes:
+      - ./loki-config/loki-config.yaml:/etc/loki/local-config.yaml
+      - loki-data:/loki
+    command: -config.file=/etc/loki/local-config.yaml
+  suricata:
+    image: jasonish/suricata:latest
+    container_name: suricata
+    network_mode: host
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
+    volumes:
+      - /home/mastersurface/suricata/config:/etc/suricata
+      - /home/mastersurface/suricata/rules:/var/lib/suricata/rules:ro
+      - /home/mastersurface/suricata/logs:/var/log/suricata
+    command: -i wlp1s0 -c /etc/suricata/suricata.yaml
+    restart: unless-stopped
+volumes:
+  influxdb_data:
+  grafana_data:
+  portainer_data:
+  loki-data:
