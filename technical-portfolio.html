@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Robert Seevers — Technical Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<style>
+  :root {
+    --bg: #1a0033;
+    --bg-alt: #0d001a;
+    --accent: #55cc88;
+    --accent-soft: rgba(85, 204, 136, 0.12);
+    --text-main: #e0e7ff;
+    --text-muted: #94a3b8;
+    --card-bg: #0d001a;
+    --border-subtle: rgba(85, 204, 136, 0.2);
+    --purple-joker: #7A1FA2;
+    --blue-bright: #0ea5e9;
+    --red-accent: #ff4444;
+    --font-main: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    font-family: var(--font-main);
+    background: radial-gradient(circle at top, #1a0033 0, #0d001a 55%);
+    color: var(--text-main);
+  }
+
+  a { color: var(--blue-bright); text-decoration: none; }
+  a:hover { color: var(--accent); text-decoration: underline; }
+
+  .page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1.5rem 1.25rem 3rem;
+  }
+
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    backdrop-filter: blur(12px);
+    background: linear-gradient(to bottom, rgba(15, 23, 42, 0.98), rgba(15, 23, 42, 0.9), rgba(15,23,42,0));
+    border-bottom: 1px solid rgba(148, 163, 184, 0.15);
+  }
+
+  .nav-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0.6rem 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .brand {
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--purple-joker);
+    text-shadow: 0 0 8px rgba(85, 204, 136, 0.4);
+  }
+
+  nav a {
+    margin-left: 1rem;
+    font-size: 0.9rem;
+    color: var(--purple-joker);
+    text-shadow: 0 0 6px rgba(85, 204, 136, 0.3);
+  }
+
+  nav a:hover {
+    color: var(--accent);
+    text-shadow: 0 0 10px rgba(85, 204, 136, 0.6);
+  }
+
+  .hero {
+    margin-top: 2.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .hero-name {
+    font-size: 2.25rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    color: var(--accent);
+    text-shadow: 0 0 12px rgba(85, 204, 136, 0.5);
+  }
+
+  .hero-sub {
+    color: var(--blue-bright);
+    margin-top: 0.25rem;
+  }
+
+  .hero-intro {
+    margin-top: 1.25rem;
+    max-width: 650px;
+    font-size: 0.98rem;
+    color: #d1d5db;
+  }
+
+  section {
+    margin-top: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--purple-joker);
+    text-shadow: 0 0 8px rgba(85, 204, 136, 0.4);
+  }
+
+  h2::before {
+    content: "";
+    width: 18px;
+    height: 18px;
+    border-radius: 999px;
+    background: radial-gradient(circle at 30% 30%, var(--accent), var(--purple-joker));
+    box-shadow: 0 0 16px rgba(85, 204, 136, 0.7);
+  }
+
+  .card {
+    background: linear-gradient(135deg, rgba(15,23,42,0.9), rgba(15,23,42,0.98));
+    border-radius: 0.75rem;
+    border: 1px solid var(--border-subtle);
+    padding: 1.25rem 1.35rem;
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.7);
+  }
+
+  .card + .card {
+    margin-top: 1rem;
+  }
+
+  .muted {
+    color: var(--text-muted);
+  }
+
+  h3 {
+    color: var(--accent);
+    margin-top: 0;
+  }
+
+  h4 {
+    color: var(--blue-bright);
+    margin-top: 1rem;
+    font-size: 1rem;
+  }
+
+  .fade-in {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.55s ease-out, transform 0.55s ease-out;
+  }
+
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (max-width: 640px) {
+    .hero-name {
+      font-size: 1.7rem;
+    }
+    .nav-inner { padding-inline: 0.9rem; }
+    .page { padding-inline: 0.9rem; }
+    nav a { margin-left: 0.6rem; font-size: 0.82rem; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav-inner">
+    <div class="brand">Robert Seevers — Technical Portfolio</div>
+    <nav>
+      <a href="index.html">Resume</a>
+      <a href="#contact">Contact</a>
+      <a href="technical-portfolio.html">Technical Portfolio</a>
+      <a href="lab-overview.html">Lab Overview</a>
+    </nav>
+  </div>
+</header>
+
+<main class="page">
+  <section class="hero fade-in">
+    <div class="hero-name">Robert Seevers</div>
+    <div class="hero-sub">Technical Portfolio — Infrastructure, Security & Diagnostics</div>
+    <p class="hero-intro">
+      This portfolio documents hands-on technical projects built in my personal lab environment. These projects demonstrate infrastructure design, security implementation, system monitoring, automation, and custom tool development using Linux, Docker, Python, and networking technologies.
+    </p>
+  </section>
+
+  <section class="fade-in">
+    <h2>Infrastructure Projects</h2>
+    
+    <div class="card">
+      <h3>Multi-Device Monitoring Infrastructure</h3>
+      <p class="muted">Dec 2025 - Present</p>
+      
+      <p>Architected and deployed a distributed monitoring infrastructure across 4 devices. The system uses MQTT pub/sub messaging to collect 39+ metrics in real-time, stores them in InfluxDB with automated retention policies, and visualizes everything through 25+ custom Grafana panels. Reduced memory consumption from 93% to 23% through service migration and optimization strategies.</p>
+
+      <p style="margin-top:0.75rem;"><strong>Technical Stack:</strong> Docker Compose orchestration, Python MQTT publishers, Telegraf metric collection, InfluxDB 2.7 time-series database, Grafana visualization, systemd service management</p>
+
+      <p style="margin-top:0.75rem;"><strong>Key Achievements:</strong></p>
+      <ul style="margin-top:0.25rem;">
+        <li>Designed custom MQTT topic hierarchy for scalable device metrics</li>
+        <li>Implemented automated InfluxDB retention policies (30-day metrics, 1-year aggregates)</li>
+        <li>Created 25+ Grafana panels with threshold alerts and anomaly detection</li>
+        <li>Reduced overall system memory usage by 70% through Docker optimization</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Network Security Implementation</h3>
+      <p class="muted">Dec 2025 - Present</p>
+      
+      <p>Designed layered security architecture combining DNS-level filtering (Pi-hole), signature-based intrusion detection (Suricata), adaptive SSH protection (fail2ban), and stateful firewall rules (UFW). Security events aggregate into Loki for centralized log analysis. Currently deploying WireGuard VPN for secure remote access with split-tunnel configuration.</p>
+
+      <p style="margin-top:0.75rem;"><strong>Security Metrics:</strong> 40%+ malicious DNS requests blocked, zero successful intrusion attempts, real-time alerting on anomalous activity</p>
+
+      <p style="margin-top:0.75rem;"><strong>Implementation Details:</strong></p>
+      <ul style="margin-top:0.25rem;">
+        <li>Pi-hole: Network-wide DNS filtering blocking 40%+ of malicious requests</li>
+        <li>Suricata IDS: Signature-based detection with Emerging Threats ruleset</li>
+        <li>fail2ban: Adaptive SSH brute-force protection with escalating ban times</li>
+        <li>UFW Firewall: Default-deny policy with granular service-level rules</li>
+        <li>WireGuard VPN: Split-tunnel remote access with automatic DNS routing</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Hardware Diagnostic Platform</h3>
+      <p class="muted">2023 - Present</p>
+      
+      <p>Built custom POST code diagnostic tool using Raspberry Pi with GPIO integration. The Python/Tkinter interface provides real-time hardware fault detection during boot, then transitions to active system monitoring once the OS loads. Monitors CPU temperature, memory usage, disk health, and network activity in real-time. Integrated full system security scanning to detect malicious software, corrupt data, and integrity violations. Designed for rapid motherboard diagnostics, ongoing system health monitoring, and repair workflow optimization.</p>
+
+      <p style="margin-top:0.75rem;"><strong>Technical Features:</strong></p>
+      <ul style="margin-top:0.25rem;">
+        <li>GPIO POST code capture for real-time boot diagnostics</li>
+        <li>Dual-mode operation: boot fault detection → system health monitoring</li>
+        <li>Custom Tkinter interface with cyberpunk theming and adaptive scaling</li>
+        <li>Integrated security scanning (malware detection, file integrity checks)</li>
+        <li>Real-time system metrics (CPU temp, memory, disk I/O, network stats)</li>
+        <li>Optimized for 320x480 TFT displays and Raspberry Pi hardware</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Docker Infrastructure Migration</h3>
+      <p class="muted">Dec 2025</p>
+      
+      <p>Executed complete containerization platform migration from Snap to Docker CE. Implemented backup/restore procedures for 7+ service containers, validated data integrity at each migration step, and documented the process for reproducibility. Eliminated permission conflicts and improved container restart reliability.</p>
+
+      <p style="margin-top:0.75rem;"><strong>Migration Process:</strong></p>
+      <ul style="margin-top:0.25rem;">
+        <li>Pre-migration: Documented existing Snap configurations and data paths</li>
+        <li>Backup: Created complete backups of all service data and configurations</li>
+        <li>Migration: Deployed Docker Compose stacks with equivalent configurations</li>
+        <li>Validation: Verified data integrity and service functionality post-migration</li>
+        <li>Optimization: Improved restart policies and resource allocation</li>
+        <li>Documentation: Created reproducible migration guide for future reference</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="fade-in">
+    <h2>Technical Expertise</h2>
+    
+    <div class="card">
+      <h4>Networking & Infrastructure</h4>
+      <p>Manage complex multi-device networks including static IP assignment, DNS configuration, routing tables, and VPN tunneling. Design network segmentation strategies, troubleshoot connectivity issues systematically, and implement security controls at multiple OSI layers. Experience with MQTT broker configuration, RTSP streaming protocols, and network performance optimization.</p>
+
+      <h4>Linux Systems Administration</h4>
+      <p>Daily administration of Ubuntu Server and Raspberry Pi OS systems. Proficient with systemd service management, user/permission models, package management (apt), and system security hardening. Comfortable working entirely from CLI, analyzing system logs (journalctl), and diagnosing resource contention issues.</p>
+
+      <h4>Programming & Scripting</h4>
+      <p><strong>Bash/Shell (Advanced):</strong> Complex system automation, text processing with grep/sed/awk, pipeline chaining, error handling, and cron scheduling.</p>
+      <p><strong>Python (Intermediate):</strong> System monitoring scripts, MQTT pub/sub implementations, hardware interfacing (GPIO), data parsing, and API interactions.</p>
+      <p><strong>PowerShell:</strong> Windows automation, file system operations, Git workflow integration.</p>
+      <p><strong>Configuration Languages:</strong> YAML, JSON, Flux Query Language</p>
+
+      <h4>Monitoring & Security</h4>
+      <p>Design Grafana dashboards with complex visualizations and alert rules. Configure intrusion detection systems, deploy firewall rules, implement SSH hardening, and analyze security logs. Experience with time-series databases, metric collection pipelines, and MQTT messaging architecture.</p>
+    </div>
+  </section>
+
+  <section class="fade-in">
+    <h2>Learning Roadmap</h2>
+    
+    <div class="card">
+      <p><strong>Near-term:</strong> Kubernetes fundamentals, CI/CD pipelines (Jenkins/GitHub Actions), Infrastructure as Code (Terraform), Advanced IDS/IPS configuration</p>
+      
+      <p style="margin-top:0.75rem;"><strong>Medium-term:</strong> Advanced Python (OOP, testing, API development), Ansible automation, Security Information and Event Management (SIEM), Penetration testing fundamentals</p>
+      
+      <p style="margin-top:0.75rem;"><strong>Long-term:</strong> Cloud platform architecture (AWS/Azure/GCP), Distributed systems design, Security architecture and compliance, Threat hunting and incident response</p>
+    </div>
+  </section>
+
+  <section id="contact" class="fade-in">
+    <h2>Contact</h2>
+    <div class="card">
+      <p>
+        <strong>Email:</strong> <a href="mailto:Rseevers20@gmail.com">Rseevers20@gmail.com</a><br />
+        <strong>Phone:</strong> 602-758-7330<br />
+        <strong>Location:</strong> Goodyear, AZ 85338
+      </p>
+      <p style="margin-top:1rem;" class="muted">
+        Available for remote IT support, diagnostics, monitoring, and technical operations roles.
+      </p>
+      <p style="margin-top:1rem;">
+        <a href="index.html">← Back to Resume</a> | 
+        <a href="lab-overview.html">View Lab Overview →</a>
+      </p>
+    </div>
+  </section>
+</main>
+
+<script>
+  document.addEventListener("scroll", () => {
+    document.querySelectorAll(".fade-in").forEach((el) => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 60) {
+        el.classList.add("visible");
+      }
+    });
+  });
+  document.dispatchEvent(new Event("scroll"));
+</script>
+
+</body>
+</html>
