@@ -3,7 +3,7 @@
 
 # Only allow resume website files
 !.gitignore
+!CNAME
 !index.html
 !technical-portfolio.html
 !lab-overview.html
-!CNAME
