@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Robert Seevers — Contact</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<style>
+  :root {
+    --bg: #1a0033;
+    --bg-alt: #0d001a;
+    --accent: #55cc88;
+    --accent-soft: rgba(85, 204, 136, 0.12);
+    --text-main: #e0e7ff;
+    --text-muted: #94a3b8;
+    --card-bg: #0d001a;
+    --border-subtle: rgba(85, 204, 136, 0.2);
+    --purple-joker: #7A1FA2;
+    --blue-bright: #0ea5e9;
+    --red-accent: #ff4444;
+    --font-main: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    font-family: var(--font-main);
+    background: radial-gradient(circle at top, #1a0033 0, #0d001a 55%);
+    color: var(--text-main);
+  }
+
+  a { color: var(--blue-bright); text-decoration: none; }
+  a:hover { color: var(--accent); text-decoration: underline; }
+
+  .page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1.5rem 1.25rem 3rem;
+  }
+
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    backdrop-filter: blur(12px);
+    background: linear-gradient(to bottom, rgba(15, 23, 42, 0.98), rgba(15, 23, 42, 0.9), rgba(15,23,42,0));
+    border-bottom: 1px solid rgba(148, 163, 184, 0.15);
+  }
+
+  .nav-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0.6rem 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .brand {
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--purple-joker);
+    text-shadow: 0 0 8px rgba(85, 204, 136, 0.4);
+  }
+
+  nav a {
+    margin-left: 1rem;
+    font-size: 0.9rem;
+    color: var(--purple-joker);
+    text-shadow: 0 0 6px rgba(85, 204, 136, 0.3);
+  }
+
+  nav a:hover {
+    color: var(--accent);
+    text-shadow: 0 0 10px rgba(85, 204, 136, 0.6);
+  }
+
+  .hero {
+    margin-top: 2.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .hero-name {
+    font-size: 2.25rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    color: var(--accent);
+    text-shadow: 0 0 12px rgba(85, 204, 136, 0.5);
+  }
+
+  .hero-sub {
+    color: var(--blue-bright);
+    margin-top: 0.25rem;
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.25rem;
+    margin-top: 2rem;
+  }
+
+  .contact-tile {
+    background: linear-gradient(135deg, rgba(15,23,42,0.9), rgba(15,23,42,0.98));
+    border-radius: 0.75rem;
+    border: 1px solid var(--border-subtle);
+    padding: 1.75rem 1.5rem;
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.7);
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  .contact-tile:hover {
+    border-color: var(--accent);
+    box-shadow: 0 20px 45px rgba(85, 204, 136, 0.2);
+    transform: translateY(-4px);
+  }
+
+  .contact-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .contact-tile h3 {
+    color: var(--accent);
+    font-size: 1.1rem;
+    margin: 0 0 0.5rem 0;
+  }
+
+  .contact-tile p {
+    color: var(--text-main);
+    margin: 0.25rem 0;
+    font-size: 0.95rem;
+  }
+
+  .contact-tile a {
+    color: var(--blue-bright);
+    word-break: break-all;
+  }
+
+  .contact-tile a:hover {
+    color: var(--accent);
+  }
+
+  .download-section {
+    margin-top: 3rem;
+    text-align: center;
+  }
+
+  .download-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--purple-joker), #9333ea);
+    color: white;
+    padding: 0.85rem 2rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 8px 20px rgba(122, 31, 162, 0.4);
+    transition: all 0.3s ease;
+  }
+
+  .download-btn:hover {
+    background: linear-gradient(135deg, #9333ea, var(--purple-joker));
+    box-shadow: 0 12px 30px rgba(122, 31, 162, 0.6);
+    transform: translateY(-2px);
+    text-decoration: none;
+    color: white;
+  }
+
+  .back-link {
+    margin-top: 2.5rem;
+    text-align: center;
+  }
+
+  .fade-in {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.55s ease-out, transform 0.55s ease-out;
+  }
+
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (max-width: 640px) {
+    .hero-name {
+      font-size: 1.7rem;
+    }
+    .nav-inner { padding-inline: 0.9rem; }
+    .page { padding-inline: 0.9rem; }
+    nav a { margin-left: 0.6rem; font-size: 0.82rem; }
+    .contact-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav-inner">
+    <div class="brand">Robert Seevers — Contact</div>
+    <nav>
+      <a href="index.html">Resume</a>
+      <a href="contact.html">Contact</a>
+      <a href="technical-portfolio.html">Technical Portfolio</a>
+      <a href="lab-overview.html">Lab Overview</a>
+    </nav>
+  </div>
+</header>
+
+<main class="page">
+  <section class="hero fade-in">
+    <div class="hero-name">Let's Connect</div>
+    <div class="hero-sub">Available for remote IT support, diagnostics, monitoring, and technical operations roles</div>
+  </section>
+
+  <section class="fade-in">
+    <div class="contact-grid">
+      <div class="contact-tile">
+        <div class="contact-icon">✉️</div>
+        <h3>Email</h3>
+        <p><a href="mailto:Rseevers20@gmail.com">Rseevers20@gmail.com</a></p>
+      </div>
+
+      <div class="contact-tile">
+        <div class="contact-icon">📞</div>
+        <h3>Phone</h3>
+        <p>602-758-7330</p>
+      </div>
+
+      <div class="contact-tile">
+        <div class="contact-icon">📍</div>
+        <h3>Location</h3>
+        <p>Goodyear, AZ 85338</p>
+        <p style="margin-top:0.5rem; color: var(--text-muted); font-size:0.85rem;">Open to remote opportunities nationwide</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="download-section fade-in">
+    <h2 style="color: var(--purple-joker); text-shadow: 0 0 8px rgba(85, 204, 136, 0.4); margin-bottom: 1rem;">Download Resume</h2>
+    <a href="Robert_Seevers_Resume.pdf" class="download-btn" download>📄 Download 1-Page Resume (PDF)</a>
+  </section>
+
+  <div class="back-link fade-in">
+    <a href="index.html">← Back to Resume</a>
+  </div>
+</main>
+
+<script>
+  document.addEventListener("scroll", () => {
+    document.querySelectorAll(".fade-in").forEach((el) => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 60) {
+        el.classList.add("visible");
+      }
+    });
+  });
+  document.dispatchEvent(new Event("scroll"));
+</script>
+
+</body>
+</html>

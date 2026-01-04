@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Robert Seevers — Digital Resume</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<style>
+  :root {
+    --bg: #1a0033;
+    --bg-alt: #0d001a;
+    --accent: #55cc88;
+    --text-main: #e0e7ff;
+    --text-muted: #94a3b8;
+    --border-subtle: rgba(85, 204, 136, 0.2);
+    --purple-joker: #7A1FA2;
+    --blue-bright: #0ea5e9;
+    --red-accent: #ff4444;
+    --font-main: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    font-family: var(--font-main);
+    background: radial-gradient(circle at top, #1a0033 0, #0d001a 55%);
+    color: var(--text-main);
+    line-height: 1.6;
+  }
+
+  a { color: var(--blue-bright); text-decoration: none; }
+  a:hover { color: var(--accent); text-decoration: underline; }
+
+  .page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1.5rem 1.25rem 3rem;
+  }
+
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    backdrop-filter: blur(12px);
+    background: linear-gradient(to bottom, rgba(15, 23, 42, 0.98), rgba(15, 23, 42, 0.9), rgba(15,23,42,0));
+    border-bottom: 1px solid rgba(148, 163, 184, 0.15);
+  }
+
+  .nav-inner {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0.6rem 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .brand {
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--purple-joker);
+    text-shadow: 0 0 8px rgba(85, 204, 136, 0.4);
+  }
+
+  nav a {
+    margin-left: 1rem;
+    font-size: 0.9rem;
+    color: var(--purple-joker);
+    text-shadow: 0 0 6px rgba(85, 204, 136, 0.3);
+  }
+
+  nav a:hover {
+    color: var(--accent);
+    text-shadow: 0 0 10px rgba(85, 204, 136, 0.6);
+  }
+
+  .resume-header {
+    text-align: center;
+    margin-top: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--purple-joker);
+  }
+
+  .resume-header h1 {
+    font-size: 2rem;
+    color: var(--accent);
+    text-shadow: 0 0 12px rgba(85, 204, 136, 0.5);
+    margin: 0;
+  }
+
+  .resume-header .subtitle {
+    color: var(--blue-bright);
+    font-size: 1.1rem;
+    margin-top: 0.25rem;
+  }
+
+  .resume-header .contact-info {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+  }
+
+  section {
+    margin-top: 2rem;
+  }
+
+  h2 {
+    color: var(--purple-joker);
+    text-shadow: 0 0 8px rgba(85, 204, 136, 0.4);
+    font-size: 1.3rem;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.25rem;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .summary-text {
+    background: linear-gradient(135deg, rgba(15,23,42,0.9), rgba(15,23,42,0.98));
+    border-radius: 0.5rem;
+    border: 1px solid var(--border-subtle);
+    padding: 1rem 1.25rem;
+    color: var(--text-main);
+  }
+
+  details {
+    background: linear-gradient(135deg, rgba(15,23,42,0.9), rgba(15,23,42,0.98));
+    border-radius: 0.5rem;
+    border: 1px solid var(--border-subtle);
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.75rem;
+    cursor: pointer;
+  }
+
+  details[open] {
+    border-color: var(--accent);
+  }
+
+  summary {
+    font-weight: 600;
+    color: var(--blue-bright);
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
+  summary::before {
+    content: "▶";
+    color: var(--accent);
+    font-size: 0.8rem;
+    transition: transform 0.2s;
+  }
+
+  details[open] summary::before {
+    transform: rotate(90deg);
+  }
+
+  details ul {
+    margin: 0.5rem 0 0 1.5rem;
+    padding: 0;
+    color: var(--text-main);
+  }
+
+  details li {
+    margin-bottom: 0.25rem;
+    font-size: 0.95rem;
+  }
+
+  details p {
+    margin: 0.5rem 0 0 0;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+  }
+
+  .job-details {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-top: 0.25rem;
+  }
+
+  .education {
+    background: linear-gradient(135deg, rgba(15,23,42,0.9), rgba(15,23,42,0.98));
+    border-radius: 0.5rem;
+    border: 1px solid var(--border-subtle);
+    padding: 1rem 1.25rem;
+  }
+
+  .education strong {
+    color: var(--accent);
+  }
+
+  .back-links {
+    margin-top: 2.5rem;
+    text-align: center;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-subtle);
+  }
+
+  @media (max-width: 640px) {
+    .resume-header h1 {
+      font-size: 1.5rem;
+    }
+    .nav-inner { padding-inline: 0.9rem; }
+    .page { padding-inline: 0.9rem; }
+    nav a { margin-left: 0.6rem; font-size: 0.82rem; }
+  }
+
+  @media print {
+    body { background: white; color: black; }
+    header { display: none; }
+    details { border: 1px solid #ccc; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav-inner">
+    <div class="brand">Robert Seevers — Digital Resume</div>
+    <nav>
+      <a href="index.html">Resume</a>
+      <a href="contact.html">Contact</a>
+      <a href="technical-portfolio.html">Technical Portfolio</a>
+      <a href="lab-overview.html">Lab Overview</a>
+    </nav>
+  </div>
+</header>
+
+<main class="page">
+  <div class="resume-header">
+    <h1>Robert Seevers</h1>
+    <div class="subtitle">Remote IT Support • Technical Support Specialist</div>
+    <div class="contact-info">Goodyear, AZ • 602‑758‑7330 • Rseevers20@gmail.com</div>
+  </div>
+
+  <section>
+    <h2>Summary</h2>
+    <div class="summary-text">
+      IT support professional with hands‑on experience in hardware repair, diagnostics, and troubleshooting. Comfortable working independently in remote environments with strong problem-solving skills. Background includes managing multi‑store repair operations and building technical projects in a personal lab. Currently expanding skills in Linux administration, Docker, system monitoring, and network security.
+    </div>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    
+    <details>
+      <summary>Technical Skills</summary>
+      <ul>
+        <li>PC and Electronics Repair & troubleshooting</li>
+        <li>Mac repair & diagnostics (Apple Certified)</li>
+        <li>Linux basics (Ubuntu, Raspberry Pi OS)</li>
+        <li>Docker containerization & project deployment</li>
+        <li>System monitoring with Grafana, InfluxDB, Telegraf</li>
+        <li>Network security tools (Pi-hole, Suricata IDS, fail2ban, UFW)</li>
+        <li>Basic Python & Bash scripting</li>
+        <li>Hardware diagnostics & POST code interpretation</li>
+        <li>OS installs, resets, recovery (Windows, Linux, macOS)</li>
+        <li>Malware removal & basic system hardening</li>
+        <li>Remote access: SSH, RDP, VNC</li>
+        <li>LAN/Wi‑Fi setup & troubleshooting</li>
+        <li>BIOS/UEFI configuration</li>
+        <li>MQTT messaging & IoT devices</li>
+        <li>DNS configuration & VPN setup</li>
+        <li>Ticketing & technical documentation</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Strengths</summary>
+      <ul>
+        <li>Reliability & follow‑through</li>
+        <li>Clear communication</li>
+        <li>Customer service</li>
+        <li>Leadership & training</li>
+        <li>Workflow improvement</li>
+        <li>Adaptability & fast learning</li>
+      </ul>
+    </details>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+
+    <details>
+      <summary>Night Maintenance Technician — Fluor (Arlington Valley Solar Plant)</summary>
+      <p class="job-details">Dec 2024 – Sept 2025 • Arlington Valley, AZ</p>
+      <ul>
+        <li>Performed nightly maintenance on solar panels and control buildings</li>
+        <li>Conducted inspections and documented issues</li>
+        <li>Ensured site security and operational readiness</li>
+        <li>Worked independently in a technical environment</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Security Officer — Dream City Church</summary>
+      <p class="job-details">Jun 2023 – Mar 2024 • Phoenix, AZ</p>
+      <ul>
+        <li>Ensured safety across a large campus</li>
+        <li>Responded to incidents and followed safety protocols</li>
+        <li>Maintained calm, professional communication</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Quality Assurance Inspector — Carvana</summary>
+      <p class="job-details">Oct 2022 – Mar 2023 • Phoenix, AZ</p>
+      <ul>
+        <li>Inspected vehicles prior to delivery</li>
+        <li>Identified and documented quality issues</li>
+        <li>Collaborated with technicians to resolve defects</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Repair Technician — Mobile Kangaroo</summary>
+      <p class="job-details">Feb 2022 – Oct 2022 • Phoenix, AZ</p>
+      <ul>
+        <li>Diagnosed and repaired laptops, desktops, and mobile devices</li>
+        <li>Explained issues clearly to customers</li>
+        <li>Maintained repair documentation and inventory</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>General Manager / Lead Repair Technician — UbreakiFix (Multi‑Location)</summary>
+      <p class="job-details">Apr 2015 – Jan 2021 • Phoenix, AZ</p>
+      <ul>
+        <li>Managed operations across three storefronts</li>
+        <li>Trained and supported technicians</li>
+        <li>Handled escalations and ensured repair quality</li>
+        <li>Balanced scheduling, inventory, and customer service</li>
+      </ul>
+    </details>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    <div class="education">
+      <strong>Associate of Science — Computer Technology & Networking</strong><br />
+      College America — Phoenix, AZ<br />
+      Graduated: Aug 2016
+    </div>
+  </section>
+
+  <div class="back-links">
+    <a href="index.html">← Back to Resume</a> | 
+    <a href="Robert_Seevers_Resume.pdf" download>Download PDF Version</a>
+  </div>
+</main>
+
+</body>
+</html>
