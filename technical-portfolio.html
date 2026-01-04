@@ -203,69 +203,36 @@
       <h3>Multi-Device Monitoring Infrastructure</h3>
       <p class="muted">Dec 2025 - Present</p>
       
-      <p>Built a monitoring system across 4 devices that tracks 39+ metrics in real-time. Uses MQTT messaging to collect data, stores it in InfluxDB with automatic cleanup, and displays everything through 25+ custom Grafana dashboards. Cut memory usage from 93% down to 23% by moving services to Docker and optimizing configurations.</p>
+      <p>Set up monitoring across 4 Raspberry Pis and servers in my lab. MQTT collects data from everything, InfluxDB stores it, and I built 25+ Grafana dashboards to visualize it all. The coolest part was troubleshooting a memory leak that had one Pi at 93% RAM usage - moved everything to Docker containers and got it down to 23%.</p>
 
-      <p style="margin-top:0.75rem;"><strong>Technical Stack:</strong> Docker Compose orchestration, Python MQTT publishers, Telegraf metric collection, InfluxDB 2.7 time-series database, Grafana visualization, systemd service management</p>
-
-      <p style="margin-top:0.75rem;"><strong>Key Achievements:</strong></p>
-      <ul style="margin-top:0.25rem;">
-        <li>Designed custom MQTT topic hierarchy for scalable device metrics</li>
-        <li>Implemented automated InfluxDB retention policies (30-day metrics, 1-year aggregates)</li>
-        <li>Created 25+ Grafana panels with threshold alerts and anomaly detection</li>
-        <li>Reduced overall system memory usage by 70% through Docker optimization</li>
-      </ul>
+      <p style="margin-top:0.75rem;"><strong>What I learned:</strong> Python MQTT publishers, InfluxDB data retention, Docker Compose networking, and way too much about Grafana query syntax. Still learning how to make dashboards that don't look overwhelming.</p>
     </div>
 
     <div class="card">
       <h3>Network Security Implementation</h3>
       <p class="muted">Dec 2025 - Present</p>
       
-      <p>Built layered security setup with DNS filtering (Pi-hole), intrusion detection (Suricata), SSH protection (fail2ban), and firewall rules (UFW). All security events feed into Loki for centralized logging. Currently setting up WireGuard VPN for secure remote access.</p>
+      <p>Started getting serious about network security after seeing how many random bots try to SSH into exposed servers. Set up Pi-hole for DNS filtering (blocks over 40% of sketchy requests), Suricata to watch for intrusion attempts, fail2ban to lock out brute-force attacks, and UFW for basic firewall rules. Working on WireGuard VPN setup so I can access everything securely when I'm not home.</p>
 
-      <p style="margin-top:0.75rem;"><strong>Security Results:</strong> Blocks over 40% of malicious DNS requests, zero successful intrusions, real-time alerts for suspicious activity</p>
-
-      <p style="margin-top:0.75rem;"><strong>Implementation Details:</strong></p>
-      <ul style="margin-top:0.25rem;">
-        <li>Pi-hole: Network-wide DNS filtering blocking over 40% of malicious requests</li>
-        <li>Suricata IDS: Signature-based detection with Emerging Threats ruleset</li>
-        <li>fail2ban: Adaptive SSH brute-force protection with escalating ban times</li>
-        <li>UFW Firewall: Default-deny policy with granular service-level rules</li>
-        <li>WireGuard VPN: Split-tunnel remote access with automatic DNS routing</li>
-      </ul>
+      <p style="margin-top:0.75rem;"><strong>Reality check:</strong> Security is hard. I'm learning as I go - reading logs, figuring out what's normal vs suspicious, tweaking rules when I accidentally lock myself out. It's a constant work in progress.</p>
     </div>
 
     <div class="card">
       <h3>Hardware Diagnostic Platform</h3>
       <p class="muted">2023 - Present</p>
       
-      <p>Built a custom diagnostic tool using Raspberry Pi that reads POST codes during computer boot to catch hardware faults. Once the system is running, it switches to monitoring CPU temp, memory, disk health, and network activity. Added security scanning to detect malware and corrupted data. Designed for fast motherboard diagnostics and ongoing system health checks during repairs.</p>
+      <p>This started as a way to speed up motherboard diagnostics from my repair days. Raspberry Pi reads POST codes via GPIO to catch boot failures, then switches to monitoring mode once the system is up. Built a Python/Tkinter GUI with a cyberpunk aesthetic (because why not?) that shows CPU temp, RAM usage, disk health, and network stats. Recently added basic malware scanning.</p>
 
-      <p style="margin-top:0.75rem;"><strong>Technical Features:</strong></p>
-      <ul style="margin-top:0.25rem;">
-        <li>GPIO POST code capture for real-time boot diagnostics</li>
-        <li>Dual-mode operation: boot fault detection → system health monitoring</li>
-        <li>Custom Tkinter interface with cyberpunk theming and adaptive scaling</li>
-        <li>Integrated security scanning (malware detection, file integrity checks)</li>
-        <li>Real-time system metrics (CPU temp, memory, disk I/O, network stats)</li>
-        <li>Optimized for 320x480 TFT displays and Raspberry Pi hardware</li>
-      </ul>
+      <p style="margin-top:0.75rem;"><strong>Challenges:</strong> Making it work on tiny 320x480 TFT screens meant learning adaptive UI scaling. Also spent way too long getting POST code timing right - turns out motherboards are fast.</p>
     </div>
 
     <div class="card">
       <h3>Docker Infrastructure Migration</h3>
       <p class="muted">Dec 2025</p>
       
-      <p>Executed complete containerization platform migration from Snap to Docker CE. Implemented backup/restore procedures for 7+ service containers, validated data integrity at each migration step, and documented the process for reproducibility. Eliminated permission conflicts and improved container restart reliability.</p>
+      <p>Snap containers kept giving me permission headaches, so I moved everything to Docker CE. Backed up 7 services, rebuilt them as Docker Compose stacks, and verified everything still worked. Documented the whole process in case I need to do it again (or when I inevitably break something).</p>
 
-      <p style="margin-top:0.75rem;"><strong>Migration Process:</strong></p>
-      <ul style="margin-top:0.25rem;">
-        <li>Pre-migration: Documented existing Snap configurations and data paths</li>
-        <li>Backup: Created complete backups of all service data and configurations</li>
-        <li>Migration: Deployed Docker Compose stacks with equivalent configurations</li>
-        <li>Validation: Verified data integrity and service functionality post-migration</li>
-        <li>Optimization: Improved restart policies and resource allocation</li>
-        <li>Documentation: Created reproducible migration guide for future reference</li>
-      </ul>
+      <p style="margin-top:0.75rem;"><strong>What I learned:</strong> Docker networking, volume mounts, restart policies, and the importance of backups before major changes.</p>
     </div>
   </section>
 
@@ -273,20 +240,19 @@
     <h2>Technical Expertise</h2>
     
     <div class="card">
-      <h4>Networking & Infrastructure</h4>
-      <p>Manage complex multi-device networks including static IP assignment, DNS configuration, routing tables, and VPN tunneling. Design network segmentation strategies, troubleshoot connectivity issues systematically, and implement security controls at multiple OSI layers. Experience with MQTT broker configuration, RTSP streaming protocols, and network performance optimization.</p>
+      <h4>Networking</h4>
+      <p>Comfortable setting up and troubleshooting home networks - static IPs, DNS, basic routing. Learning VPN setup and MQTT for IoT device communication. Still figuring out the fancier stuff but getting better at reading network logs.</p>
 
-      <h4>Linux Systems Administration</h4>
-      <p>Daily administration of Ubuntu Server and Raspberry Pi OS systems. Proficient with systemd service management, user/permission models, package management (apt), and system security hardening. Comfortable working entirely from CLI, analyzing system logs (journalctl), and diagnosing resource contention issues.</p>
+      <h4>Linux</h4>
+      <p>Use Ubuntu Server and Raspberry Pi OS daily. Can navigate CLI, manage services with systemd, install packages, read logs, and do basic security hardening. Still learning - I break things regularly but getting faster at fixing them.</p>
 
-      <h4>Programming & Scripting</h4>
-      <p><strong>Bash/Shell (Advanced):</strong> Complex system automation, text processing with grep/sed/awk, pipeline chaining, error handling, and cron scheduling.</p>
-      <p><strong>Python (Intermediate):</strong> System monitoring scripts, MQTT pub/sub implementations, hardware interfacing (GPIO), data parsing, and API interactions.</p>
-      <p><strong>PowerShell:</strong> Windows automation, file system operations, Git workflow integration.</p>
-      <p><strong>Configuration Languages:</strong> YAML, JSON, Flux Query Language</p>
+      <h4>Scripting</h4>
+      <p><strong>Bash:</strong> Write automation scripts, use grep/sed/awk for text processing, set up cron jobs. Getting comfortable chaining commands together.</p>
+      <p><strong>Python:</strong> Built monitoring scripts, worked with MQTT libraries, did some GPIO interfacing with Raspberry Pi. Intermediate level - can read and modify code, write simple scripts.</p>
+      <p><strong>PowerShell:</strong> Basic Windows automation, file management, Git commands.</p>
 
-      <h4>Monitoring & Security</h4>
-      <p>Design Grafana dashboards with complex visualizations and alert rules. Configure intrusion detection systems, deploy firewall rules, implement SSH hardening, and analyze security logs. Experience with time-series databases, metric collection pipelines, and MQTT messaging architecture.</p>
+      <h4>Monitoring & Dashboards</h4>
+      <p>Built a lot of Grafana dashboards. Learning InfluxDB queries, setting up alerts, and making sense of time-series data. Also getting into security monitoring - reading IDS logs and trying to understand what's actually a threat vs noise.</p>
     </div>
   </section>
 
@@ -294,11 +260,11 @@
     <h2>Learning Roadmap</h2>
     
     <div class="card">
-      <p><strong>Near-term:</strong> Kubernetes fundamentals, CI/CD pipelines (Jenkins/GitHub Actions), Infrastructure as Code (Terraform), Advanced IDS/IPS configuration</p>
+      <p><strong>What I'm learning next:</strong> Kubernetes basics, setting up CI/CD pipelines, and improving my IDS configuration. Want to get better at infrastructure automation.</p>
       
-      <p style="margin-top:0.75rem;"><strong>Medium-term:</strong> Advanced Python (OOP, testing, API development), Ansible automation, Security Information and Event Management (SIEM), Penetration testing fundamentals</p>
+      <p style="margin-top:0.75rem;"><strong>Future goals:</strong> Dive deeper into Python (OOP, proper testing), learn Ansible for automation, explore SIEM tools, and maybe try some basic penetration testing. Really interested in the cybersecurity side of things.</p>
       
-      <p style="margin-top:0.75rem;"><strong>Long-term:</strong> Cloud platform architecture (AWS/Azure/GCP), Distributed systems design, Security architecture and compliance, Threat hunting and incident response</p>
+      <p style="margin-top:0.75rem;"><strong>Dream skills:</strong> Cloud platforms (AWS/Azure), building distributed systems, security architecture. Long way to go but enjoying the journey.</p>
     </div>
   </section>
 
