@@ -107,5 +107,5 @@ Graduated: Aug 2016.
 - Resume Website = https://r.rebootlab.repair
 - Resume Download PDF = https://r.rebootlab.repair/Robert_Seevers_Resume.pdf
 - Resume Download .md = https://r.rebootlab.repair/Robert_Seevers_Resume.md
-- Personal Website/Hobby-Business = https://rebootlab.repair/
+- Personal Website/Hobby-Business = https://rebootlab.repair
 
